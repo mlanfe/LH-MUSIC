@@ -12,7 +12,7 @@ export default memo(function AppHeader() {
       <div className="content wrap-v1">
         <HeaderLeft>
           <a href="#/" className="logo sprite_01">网易云音乐</a>
-          <NavLink to="/" exact className="header-left-item sprite_01">
+          <NavLink to="/discover" className="header-left-item sprite_01">
             发现音乐
             <i className="sprite_01 icon"></i>
           </NavLink>

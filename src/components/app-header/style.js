@@ -54,9 +54,8 @@ export const HeaderWrapper = styled.div`
 
   .bottom-line{
     background-color: #C20C0C;
-    height: 34px;
+    height: 5px;
     width: 100%;
-    display: flex;
   }
 `
 
