@@ -1,13 +1,14 @@
-import { GET_BANNER } from "./constants";
+import { CHANGE_BANNER_ACTION } from "./constants";
+import { Map } from "immutable";
 
-const InitialBanner = {
+const InitialBanner = Map({
   bannerList: []
-}
+})
 
 export default function reducer(state=InitialBanner, action) {
   switch (action.type) {
-    case GET_BANNER:
-      return {...state, bannerList: action.data }
+    case CHANGE_BANNER_ACTION:
+      return state.set('bannerList', action.data)
     default:
       return state;
   }

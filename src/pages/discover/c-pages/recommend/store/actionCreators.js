@@ -1,9 +1,9 @@
 import * as api  from "@/network/recommend";
-import { GET_BANNER } from "./constants";
+import { CHANGE_BANNER_ACTION } from "./constants";
 
-export function getBanner(data) {
+export function changeBannerAction(data) {
   return {
-    type: GET_BANNER,
+    type: CHANGE_BANNER_ACTION,
     data,
   }
 }
@@ -12,7 +12,7 @@ export function getBannerAction() {
   return dispatch => {
     api.getBannerList().then(res => {
       console.log(res.data.banners);
-      dispatch(getBanner(res.data.banners))
+      dispatch(changeBannerAction(res.data.banners))
     })
   }
 }
